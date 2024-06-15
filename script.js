@@ -17,10 +17,10 @@ function decrement() {
 
 function save() {
     let countedFor = count
-    // saveEl.textContent += 
-    saveEl.innerHTML = `
+    let counts = (count > 1) ? "Counts" : "Count"
+    saveEl.innerHTML += `
         <div>
-            <h2 id="saved-value">Save ${saveState++}: ${countedFor} </h2>
+            <h2 id="saved-value">Save ${saveState++}: ${countedFor} ${counts}</h2>
         </div>
     `
     count = 0
