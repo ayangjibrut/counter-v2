@@ -1,16 +1,23 @@
 * {
     box-sizing: border-box;
-}
-
-body {
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
 .container {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     text-align: center;
 }
 
-#saved-value {
+button {
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.25em;
 }
