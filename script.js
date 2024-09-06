@@ -18,16 +18,34 @@ function decrement() {
     countEl.textContent = count
 }
 
+function getFormattedDateTime() {
+    const now = new Date();
+  
+    const options = {
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: false
+    }
+  
+    return now.toLocaleString('en-US', options)
+}
+
 function save() {
     let countedFor = count
     totalCount += countedFor
-    let counts = (count > 1) ? "Counts" : "Count"
+    let counts = (count > 1) ? "Vehicles" : "Vehicle"
+
+    const formattedDateTime = getFormattedDateTime()
+
     saveEl.innerHTML += `
         <div>
-            <p>Save ${saveState++}: ${countedFor} ${counts}</p>
+            <p>Save ${saveState++}: ${countedFor} ${counts} parked on ${formattedDateTime}</p>
         </div>
     `
     count = 0
     countEl.textContent = count
-    totalEl.textContent = "Total: " + totalCount + " Counted so far "
+    totalEl.textContent = "Total: " + totalCount + " Vehicles has parked"
 }
