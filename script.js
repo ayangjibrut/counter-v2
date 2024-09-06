@@ -22,30 +22,34 @@ function getFormattedDateTime() {
     const now = new Date();
   
     const options = {
-      weekday: 'short',
-      month: 'short',
-      day: 'numeric',
+    //   weekday: 'short',
+    //   month: 'short',
+    //   day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
-      hour12: false
+      hour12: true
     }
   
     return now.toLocaleString('en-US', options)
 }
 
 function save() {
+    if (count < 1) {
+        return false
+    }
+
     let countedFor = count
     totalCount += countedFor
-    let counts = (count > 1) ? "Vehicles" : "Vehicle"
+    let counts = (count > 1) ? "Glasses" : "Glass"
 
     const formattedDateTime = getFormattedDateTime()
 
     saveEl.innerHTML += `
         <div>
-            <p>Save ${saveState++}: ${countedFor} ${counts} parked on ${formattedDateTime}</p>
+            <p>Drink <strong>${countedFor}</strong> ${counts} of water at ${formattedDateTime}</p>
         </div>
     `
     count = 0
     countEl.textContent = count
-    totalEl.textContent = "Total: " + totalCount + " Vehicles has parked"
+    totalEl.textContent = "I have drink " + totalCount + " glasses of water today!"
 }

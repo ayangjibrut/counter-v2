@@ -7,20 +7,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
-    <title>Counter for Things</title>
+    <title>Drinking Water Counter</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Parking Counter</h1>
+            <h1>Drinking Water Counter</h1>
         </header>
 
         <main>
             <h1 id="count-value">0</h1>
-            <button id="plus-btn" onclick="increment()">+</button>
-            <button id="minus-btn" onclick="decrement()">-</button>
+            <div>
+                <button id="plus-btn" onclick="increment()">+</button>
+                <button id="minus-btn" onclick="decrement()">−</button>
+            </div>
             <button id="save-btn" onclick="save()">Save</button>
-            <h2>Vehicle Counted:</h2>
+            <h2>Glass of water counted:</h2>
             <div id="saved-value"></div>
             <div id="total-value"></div>
         </main>
