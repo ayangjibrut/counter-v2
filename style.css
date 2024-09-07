@@ -1,22 +1,22 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 body {
     width: 90%;
     margin: auto;
     font-family: "Montserrat", sans-serif;
-    background-color: darkslategray;
+    background-color: #023047;
     color: whitesmoke;
 }
 
 .container {
     text-align: center;
-    padding: 1.5em;
-    width: 80%;
-    margin: auto;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #219ebc;
+    border-radius: 10px;
 }
 
 #count-value {
@@ -26,6 +26,8 @@ body {
 
 button {
     margin: .25em;
+    background-color: #fb8500;
+    color: whitesmoke;
 }
 
 #plus-btn, #minus-btn {
@@ -34,10 +36,10 @@ button {
     height: 75px;
     border: none;
     border-radius: 50%;
-    /* margin-top: .5em; */
 }
 
 #save-btn {
+    border: none;
     padding: .5em 2.5em;
     border-radius: 8px;
     font-size: 1.5em;
@@ -46,4 +48,8 @@ button {
 
 #saved-value {
     margin: .75em;
+}
+
+strong {
+    color: #1b263b;
 }

@@ -52,5 +52,7 @@ function save() {
 
     count = 0
     countEl.textContent = count
-    totalEl.textContent = "I have drank " + totalCount + " glasses of water today!"
+    totalEl.innerHTML = `
+        <p>"I have drank <strong>${totalCount}</strong> glasses of water today!"</p>
+    `
 }
