@@ -46,10 +46,11 @@ function save() {
 
     saveEl.innerHTML += `
         <div>
-            <p>Drink <strong>${countedFor}</strong> ${counts} of water at ${formattedDateTime}</p>
+            <p>Drinking <strong>${countedFor}</strong> ${counts} of water at ${formattedDateTime}</p>
         </div>
     `
+
     count = 0
     countEl.textContent = count
-    totalEl.textContent = "I have drink " + totalCount + " glasses of water today!"
+    totalEl.textContent = "I have drank " + totalCount + " glasses of water today!"
 }
